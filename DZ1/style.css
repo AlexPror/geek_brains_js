@@ -5,15 +5,15 @@
 #particles-js {
   height: 100vh;
   background-color: #187eb6;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
   text-align: center;
   width: 700px;
   height: 500px;
-  display: block;
-  top: 20%;
-  left: 31%;
   position: absolute;
   font-size: 4rem;
   border-radius: 0.5rem;
