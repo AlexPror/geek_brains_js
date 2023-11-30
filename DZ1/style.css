@@ -10,7 +10,7 @@
 .container {
   text-align: center;
   width: 700px;
-  height: 300px;
+  height: 500px;
   display: block;
   top: 20%;
   left: 31%;
@@ -51,6 +51,11 @@ input {
   font-size: 2rem;
   width: 25rem;
   border-radius: 0.5rem;
+  text-align: center;
+}
+
+.res-wrapper {
+  margin: 2.5rem 2rem;
 }
 
 .input_error {

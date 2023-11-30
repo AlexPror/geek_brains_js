@@ -20,43 +20,79 @@
 //   alert(`Температура °C: ${temperature}, Температура °F: ${farengate}`);
 // }
 
-const enterBtn = document.querySelector("#btn");
-const temperature = document.getElementById("temperature");
+// const buttonEl = document.querySelector("#btn");
+// const inputeEl = document.getElementById("temperature");
 
-document.addEventListener("keypress", function (e) {
-  if (e.keyCode !== 13) {
-    return;
-  }
-  tempertatureConverter(true);
-});
+// temperature.addEventListener("keypress", function (e) {
+//   if (e.keyCode !== 13) {
+//     return;
+//   }
+//   tempertatureConverter(true);
+// });
 
-enterBtn.addEventListener("click", function () {
-  tempertatureConverter();
-});
+// enterBtn.addEventListener("click", function () {
+//   tempertatureConverter();
+// });
 
-function tempertatureConverter(isEnter = false) {
+// function tempertatureConverter(isEnter = false) {
+//   const temperatureValue = temperature.value;
+//   const farengate = temperatureValue * (5 / 9) + 32;
+//   if (temperatureValue === "") {
+//     return temperature.classList.add(
+//       "input_error"
+//     ); /*добавляем класс для выделения бордера при ошибке*/
+//   } else {
+//     temperature.classList.remove(
+//       "input_error"
+//     ); /*удаляем класс, добавленный ранее*/
+//   }
+
+//   if (isEnter) {
+//     return alert(
+//       `Температура °C: ${temperatureValue}, Температура °F: ${farengate.toFixed(
+//         2
+//       )}` /*запуск с клавиатуры*/
+//     );
+//   }
+//   alert(
+//     `Температура °C: ${temperatureValue}, Температура °F: ${farengate.toFixed(
+//       2
+//     )}` /*запуск кликом мышки*/
+//   );
+// }
+
+// const enterBtn = document.querySelector("#btn");
+// const temperature = document.getElementById("temperature");
+
+// document.addEventListener("keypress", function (e) {
+//   if (e.keyCode !== 13) {
+//     return;
+//   }
+//   tempertatureConverter();
+// });
+
+// enterBtn.addEventListener("click", function () {
+//   tempertatureConverter();
+// });
+
+function tempertatureConverter() {
   const temperatureValue = temperature.value;
   const farengate = temperatureValue * (5 / 9) + 32;
+  const errorClassname = "input_error";
+
   if (temperatureValue === "") {
-    return temperature.classList.add(
-      "input_error"
-    ); /*добавляем класс для выделения бордера при ошибке*/
+    // добавляем класс для выделения бордера при ошибке
+    return temperature.classList.add(errorClassname);
   } else {
-    temperature.classList.remove(
-      "input_error"
-    ); /*удаляем класс, добавленный ранее*/
+    // удаляем класс, добавленный ранее
+    temperature.classList.remove(errorClassname);
   }
 
-  if (isEnter) {
-    return alert(
-      `Температура °C: ${temperatureValue}, Температура °F: ${farengate.toFixed(
-        2
-      )}` /*запуск с клавиатуры*/
-    );
-  }
-  alert(
-    `Температура °C: ${temperatureValue}, Температура °F: ${farengate.toFixed(
-      2
-    )}` /*запуск кликом мышки*/
-  );
+  // запуск с клавиатуры
+
+  const result = `Цельсий: ${temperatureValue}°C, Фарренгейт: ${farengate.toFixed(
+    2
+  )}°F`;
+
+  $("#result").text(result);
 }
