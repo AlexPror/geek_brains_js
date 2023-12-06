@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Winterlettering", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  src: local("Winterlettering"), url("./fonts/Winterlettering-Regular.ttf"), url("./fonts/Winterlettering-Regular.woff"),
+    url("./fonts/Winterlettering-Regular.woff2");
+}
+
 body {
   padding: 1rem;
   display: flex;
@@ -15,7 +23,7 @@ body {
 }
 
 #particles-js {
-  /* position: absolute; */
+  position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
@@ -50,6 +58,7 @@ body {
 
 .title {
   margin-top: 1rem;
+  font-family: Winterlettering, sans-serif;
 }
 
 input {
