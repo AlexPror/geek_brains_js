@@ -13,9 +13,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="task-one">
-        <div class="title">Задача 1</div>
-        <div class="data">
+      <div class="home-work__items">
+        <div class="item">
+          <div class="title">Задача 1</div>
           <input
             type="number"
             id="positive"
@@ -26,24 +26,81 @@
             id="negative"
             placeholder="Введите отрицательное число"
           />
-        </div>
-        <div class="btn">
-          <button class="enter-btn" id="btn">Ввод</button>
-          <button class="reset-btn" id="btn-reset">Сброс</button>
-        </div>
-        <div class="res-wrapper">
-          <div id="result"></div>
-        </div>
-        <!-- <div class="task-tree">
-          <div class="title">Задача 3</div>
-          <div class="calendar-wrapper">
-            <div class="calendar">
-              <div class="first-decade"></div>
-              <div class="second-decade"></div>
-              <div class="third-decade"></div>
-            </div>
+          <div class="btn">
+            <button class="enter-btn" id="btn">Ввод</button>
+            <button class="reset-btn" id="btn-reset">Сброс</button>
           </div>
-        </div> -->
+          <div class="res-wrapper">
+            <div id="result"></div>
+          </div>
+        </div>
+        <div class="calender-container">
+          <div class="item">
+            <div class="title">Задача 3</div>
+            <input
+              type="number"
+              placeholder=" Введите день месяца"
+              id="dayNumber"
+            />
+            <div class="btn">
+              <button class="enter-btn" id="btn3">Ввод</button>
+              <button class="reset-btn" id="btn-reset3">Сброс</button>
+            </div>
+            <!-- <div class="calendar-week-day">
+              <div>Пн</div>
+              <div>Вт</div>
+              <div>Ср</div>
+              <div>Чт</div>
+              <div>Пт</div>
+              <div>Сб</div>
+              <div>Вс</div>
+            </div> -->
+            <!-- <div class="calendar-days">
+              <div class="day" id="decade" value="">1</div>
+              <div class="day" id="decade" value="2">2</div>
+              <div class="day" id="decade" value="3">3</div>
+              <div class="day" id="decade" value="4">4</div>
+              <div class="day" id="decade" value="5">5</div>
+              <div class="day" id="decade" value="6">6</div>
+              <div class="day" id="decade" value="7">7</div>
+              <div class="day" id="decade" value="8">8</div>
+              <div class="day" id="decade" value="9">9</div>
+              <div class="day" id="decade" value="10">10</div>
+              <div class="day" id="decade" value="11">11</div>
+              <div class="day" id="decade" value="12">12</div>
+              <div class="day" id="decade" value="13">13</div>
+              <div class="day" id="decade" value="14">14</div>
+              <div class="day" id="decade" value="15">15</div>
+              <div class="day" id="decade" value="16">16</div>
+              <div class="day" id="decade" value="17">17</div>
+              <div class="day" id="decade" value="18">18</div>
+              <div class="day" id="decade" value="19">19</div>
+              <div class="day" id="decade" value="20">20</div>
+              <div class="day" id="decade" value="21">21</div>
+              <div class="day" id="decade" value="22">22</div>
+              <div class="day" id="decade" value="23">23</div>
+              <div class="day" id="decade" value="24">24</div>
+              <div class="day" id="decade" value="25">25</div>
+              <div class="day" id="decade" value="26">26</div>
+              <div class="day" id="decade" value="27">27</div>
+              <div class="day" id="decade" value="28">28</div>
+              <div class="day" id="decade" value="29">29</div>
+              <div class="day" id="decade" value="30">30</div>
+              <div class="day" id="decade" value="31">31</div>
+            </div> -->
+            <div id="result3"></div>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="title">Задача 4</div>
+          <input type="number" placeholder="Введите число" id="placeNum" />
+          <div class="btn">
+            <button class="enter-btn" id="btn4">Ввод</button>
+            <button class="reset-btn" id="btn-reset4">Сброс</button>
+          </div>
+          <div id="result4"></div>
+        </div>
       </div>
     </div>
   </body>

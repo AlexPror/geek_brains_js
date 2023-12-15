@@ -29,6 +29,8 @@ function defineNumber() {
 const resetBtn = document.querySelector("#btn-reset");
 resetBtn.addEventListener("click", function () {
   document.querySelector("#result").innerHTML = "";
+  document.querySelector("#positive").value = "";
+  document.querySelector("#negative").value = "";
 });
 const enterBtn = document.querySelector("#btn");
 enterBtn.addEventListener("click", function () {

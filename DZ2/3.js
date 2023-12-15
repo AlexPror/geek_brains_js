@@ -37,16 +37,51 @@
 // }
 // console.log(newArr);
 
-function decadeNumber(dayNumber) {
+function decadeNumber() {
+  const dayNumber = document.querySelector("#dayNumber").value;
+  let result;
   if (dayNumber >= 1 && dayNumber <= 10) {
-    console.log(`Число ${dayNumber} попадает в первую декаду месяца`);
+    result = `Число ${dayNumber} попадает в первую декаду месяца`;
   } else if (dayNumber >= 11 && dayNumber <= 20) {
-    console.log(`Число ${dayNumber} попадает во вторую декаду месяца`);
+    result = `Число ${dayNumber} попадает во вторую декаду месяца`;
   } else if (dayNumber >= 21 && dayNumber <= 31) {
-    console.log(`Число ${dayNumber} попадает в третью декаду месяца`);
+    result = `Число ${dayNumber} попадает в третью декаду месяца`;
   } else if (dayNumber > 31) {
-    console.log(`Неверное значение`);
+    result = `Неверное значение`;
   }
+  document.querySelector("#result3").innerHTML = result;
 }
 
-decadeNumber(33);
+// calenderNumber();
+// function calenderNumber() {
+//   const dayDig = document.querySelector("#decade").innerText;
+//   const dayNumber = document.querySelector("#dayNumber");
+//   dayNumber.value = dayDig;
+//   let result;
+//   if (dayNumber >= 1 && dayNumber <= 10) {
+//     result = `Число ${dayNumber} попадает в первую декаду месяца`;
+//   } else if (dayNumber >= 11 && dayNumber <= 20) {
+//     result = `Число ${dayNumber} попадает во вторую декаду месяца`;
+//   } else if (dayNumber >= 21 && dayNumber <= 31) {
+//     result = `Число ${dayNumber} попадает в третью декаду месяца`;
+//   } else if (dayNumber > 31) {
+//     result = `Неверное значение`;
+//   }
+//   document.querySelector("#result3").innerHTML = result;
+// }
+
+const enterBtn3 = document.querySelector("#btn3");
+enterBtn3.addEventListener("click", function () {
+  decadeNumber();
+});
+
+// const enterDay = document.querySelector("#decade");
+// enterDay.addEventListener("click", function () {
+//   calenderNumber();
+// });
+
+const resetBtn3 = document.querySelector("#btn-reset3");
+resetBtn3.addEventListener("click", function () {
+  document.querySelector("#result3").innerHTML = "";
+  document.querySelector("#dayNumber").value = "";
+});

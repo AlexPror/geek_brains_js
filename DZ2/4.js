@@ -22,16 +22,26 @@
 Уточнение: Пользователь всегда вводит корректное положительное целое число.
 Подсказка: Возможно, вам понадобится округление чисел и оператор %.
 */
-const number = 119562;
-placeNumber(number);
-function placeNumber(number) {
-  const units = number % 10;
-  number = Math.floor(number / 10);
-  const tens = number % 10;
-  number = Math.floor(number / 10);
-  const hundreds = number % 10;
-  number = `${number}${tens}${units}`;
-  console.log(
-    `В числе ${number} количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${units}`
-  );
+function placeNumber() {
+  const placeNum = document.querySelector("#placeNum").value;
+  const units = placeNum % 10;
+  const num = Math.floor(placeNum / 10);
+  const tens = num % 10;
+  const dig = Math.floor(num / 10);
+  const hundreds = dig % 10;
+  const digit = `${dig}${tens}${units}`;
+  let result;
+  result = `В числе ${digit} количество сотен: ${hundreds}, десятков: ${tens}, единиц: ${units}`;
+  document.querySelector("#result4").innerHTML = result;
 }
+
+const enterBtn4 = document.querySelector("#btn4");
+enterBtn4.addEventListener("click", function () {
+  placeNumber();
+});
+
+const resetBtn4 = document.querySelector("#btn-reset4");
+resetBtn4.addEventListener("click", function () {
+  document.querySelector("#result4").innerHTML = "";
+  document.querySelector("#placeNum").value = "";
+});
