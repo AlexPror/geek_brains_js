@@ -5,6 +5,6 @@
 Если есть какие-либо недочеты в коде, можете их исправить.
 */
 
-// let test = confirm("У вас много денег?");
-// let message = test === true ? "Скоро будем у вас ;)" : "До свидания.";
-// alert(message);
+let test = confirm("У вас много денег?");
+let message = test === true ? "Скоро будем у вас ;)" : "До свидания.";
+alert(message);
