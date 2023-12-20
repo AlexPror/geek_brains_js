@@ -5,7 +5,7 @@
 }
 
 body {
-  background: #5e475f;
+  background-color: #5e475f;
   /* height: 100vh; */
   display: flex;
   justify-content: center;
@@ -32,6 +32,7 @@ body {
 .wrap {
   margin-top: 300px;
   perspective: 1000px;
+  /* background-image: linear-gradient(ellipse, rgb(64, 22, 143) 0%, rgb(32, 14, 96) 40%, rgb(10, 0, 34) 100%); */
   /* perspective-origin: 50% 50%; */
 }
 
@@ -116,7 +117,7 @@ body {
 }
 
 input {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   padding: 1rem;
   font-size: 1rem;
   width: 20rem;

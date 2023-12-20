@@ -1,3 +1,20 @@
+//поворот куба за курсором (не работает)
+function rotateCube(e) {
+  const cube = document.querySelector("#cube");
+  let x = e.clientX - window.innerWidth / 2;
+  let y = e.clientY - window.innerHeight / 2;
+  const q = 0.15;
+
+  x = x * q * 1.25;
+  y = -y * q * 1.25;
+
+  for (let i = 0; i < cube.length; i++)
+    cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
+}
+
+document.addEventListener("mousemove", rotateCube);
+
+// поворот куба с клавиатуры
 let x = 0,
   y = 0;
 
@@ -51,11 +68,11 @@ enterBtn.addEventListener("click", function () {
 function moneyForNothing() {
   const money = Number(document.querySelector("#money").value);
   console.log(money);
-  const wage = `Размер заработной платы за вычетом налогов равен ${
+  const wage = `Размер заработной платы за вычетом налогов равен ${(
     money * 0.87
-  }`;
+  ).toFixed(2)}`;
   const message = "Значение задано неверно";
-  Number.isInteger(money)
+  Number.isFinite(money)
     ? (document.querySelector("#result2").innerHTML = wage)
     : (document.querySelector("#result2").innerHTML = message);
   // if (Number.isInteger(money)) {
@@ -157,7 +174,9 @@ function differenceNumber() {
 function divideNumber() {
   const numberOne = +document.querySelector("#numberOne").value;
   const numberTwo = +document.querySelector("#numberTwo").value;
-  document.querySelector("#result4").innerHTML = numberOne / numberTwo;
+  document.querySelector("#result4").innerHTML = (
+    numberOne / numberTwo
+  ).toFixed(2);
 }
 
 const resetBtn4 = document.querySelector("#btn-reset4");
