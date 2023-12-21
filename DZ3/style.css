@@ -67,7 +67,7 @@ body {
 .back {
   background-color: #000;
   text-align: center;
-  transform: translateZ(-100px) rotateY(180deg);
+  transform: translateZ(-100px) rotateY(-180deg);
 }
 
 .right {
