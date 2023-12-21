@@ -19,10 +19,25 @@ let x = 0,
   y = 0;
 
 document.addEventListener("keydown", function (e) {
-  if (e.keyCode == 37) y -= 5;
-  if (e.keyCode == 39) y += 5;
-  if (e.keyCode == 38) x += 5;
-  if (e.keyCode == 40) x -= 5;
+  // if (e.keyCode == 37) y -= 5;
+  // if (e.keyCode == 39) y += 5;
+  // if (e.keyCode == 38) x += 5;
+  // if (e.keyCode == 40) x -= 5;
+
+  switch (e.code) {
+    case "ArrowLeft": // если нажата клавиша влево
+      x -= 5;
+      break;
+    case "ArrowUp": // если нажата клавиша вверх
+      y += 5;
+      break;
+    case "ArrowRight": // если нажата клавиша вправо
+      x += 5;
+      break;
+    case "ArrowDown": // если нажата клавиша вниз
+      y -= 5;
+      break;
+  }
 
   document.querySelector(
     ".cube"
