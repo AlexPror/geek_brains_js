@@ -76,10 +76,13 @@ function oddNumber() {
 
 //удаление элемента
 function delElem() {
-  let delElement = document.querySelector("#elem");
-  for (let i = 0; i < nav.children.length; i++) {
-    let parent = delElement.parentNode;
-    parent.removeChild(delElement);
+  let delElement = document.querySelectorAll("#elem");
+  for (let i = 0; i < delElement.length; i++) {
+    let result = delElement;
+    result.forEach(function (item) {
+      let product = item;
+      product.remove();
+    });
   }
 }
 
@@ -120,11 +123,12 @@ function createArr() {
   createArr = () => {};
 }
 
+let navTwo = document.querySelector("#navTwo");
 function createElemArr() {
-  let navTwo = document.querySelector("#navTwo");
   for (let i = 0; i < randArr.length; i++) {
     const newElem = document.createElement("div");
     newElem.classList.add("nav__item");
+    newElem.id = "arrElem";
     newElem.innerHTML = randArr[i];
     navTwo.appendChild(newElem);
   }
@@ -152,7 +156,7 @@ function replaceElem() {
 }
 
 function delOldArr() {
-  let deleteElement = navTwo.querySelectorAll("div");
+  let deleteElement = document.querySelectorAll("#arrElem");
   for (let i = 0; i < deleteElement.length; i++) {
     deleteElement[i].remove();
   }
