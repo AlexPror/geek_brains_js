@@ -12,4 +12,9 @@ xxxx
 xxxxx
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+// const string = "x";
+// const arr = [];
+// for (let index = 1; index <= 20; index++) {
+//   arr.push(string);
+//   console.log(arr.join(""));
+// }

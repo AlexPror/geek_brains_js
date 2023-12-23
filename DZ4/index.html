@@ -4,12 +4,83 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Homework</title>
+    <title>Home work 4</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="1.js" defer></script>
     <script src="2.js" defer></script>
     <script src="3.js" defer></script>
     <script src="4.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="task-wrap">
+        <div class="title-wrap">
+          <div class="title">Задача 1</div>
+        </div>
+        <div class="btn">
+          <button id="sortAsc" class="enter-btn">
+            Сортировка по возрастанию
+          </button>
+          <button id="sortDesc" class="reset-btn">
+            Сортировка по убыванию
+          </button>
+        </div>
+        <div class="btn">
+          <button id="evenNum" class="btnEven">Найти четные числа</button>
+          <button id="oddNum" class="btnOdd">Найти нечетные числа</button>
+          <button class="reset-btn" id="btn-reset">Сброс</button>
+        </div>
+        <div id="nav" class="nav-wrap__one">
+          <div id="card" class="nav__item" data="3">3</div>
+          <div id="card" class="nav__item" data="2">2</div>
+          <div id="card" class="nav__item" data="4">4</div>
+          <div id="card" class="nav__item" data="5">5</div>
+          <div id="card" class="nav__item" data="7">7</div>
+          <div id="card" class="nav__item" data="9">9</div>
+          <div id="card" class="nav__item" data="1">1</div>
+          <div id="card" class="nav__item" data="8">8</div>
+          <div id="card" class="nav__item" data="6">6</div>
+          <div id="card" class="nav__item" data="10">10</div>
+          <div id="card" class="nav__item" data="0">0</div>
+        </div>
+      </div>
+
+      <div class="task-wrap">
+        <div class="title-wrap">
+          <div class="title">Задача 2</div>
+        </div>
+        <input
+          id="elemQuantity"
+          type="number"
+          placeholder="Задайте количество элементов массива"
+        />
+        <div class="btn">
+          <button id="createArr" class="enter-btn">Создать массив</button>
+        </div>
+        <input
+          id="elemReplace"
+          type="number"
+          placeholder="От какого элемента меняем?"
+        />
+        <input
+          id="quantElem"
+          type="number"
+          placeholder="Сколько элементов меняем?"
+        />
+        <input
+          id="newElem"
+          type="number"
+          placeholder="Введите значение нового элемента"
+        />
+        <button id="replace" class="reset-btn">Заменить элемент</button>
+        <!-- <div class="btn">
+          <button id="evenNum" class="btnEven">Найти четные числа</button>
+          <button id="oddNum" class="btnOdd">Найти нечетные числа</button>
+          <button class="reset-btn" id="btn-reset">Сброс</button>
+        </div> -->
+        <div id="navTwo" class="task-wrap__one"></div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
 </html>

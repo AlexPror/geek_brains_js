@@ -14,4 +14,20 @@
 не окажется, значит нужно будет вывести пустой массив.
 */
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+// const arr = [];
+// const newArr = [];
+// for (let index = 0; index <= 5; index++) {
+//   arr.push(Math.floor(Math.random() * 10));
+//   if (arr[index] === 3) {
+//     newArr.push(index);
+//   }
+// }
+// console.log(arr);
+// console.log("Массив индексов в которых значение равно 3:", newArr);
+// console.log("Минимальный элемент массива :", Math.min.apply(null, arr));
+
+// let sum = 0;
+// for (let i = 0; i < arr.length; i++) {
+//   sum += arr[i];
+// }
+// console.log("Сумма элементов массива :", sum);

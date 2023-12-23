@@ -9,7 +9,7 @@ function rotateCube(e) {
   y = -y * q * 1.25;
 
   for (let i = 0; i < cube.length; i++)
-    cube[i].style.transform = "rotateY(" + x + "deg) rotateX(" + y + "deg)";
+    (cube[i].style.transform = rotateY(+x + "deg")), rotateX(+y + "deg");
 }
 
 document.addEventListener("mousemove", rotateCube);
