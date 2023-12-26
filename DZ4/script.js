@@ -1,4 +1,13 @@
 //     Задача 1
+/*
+Необходимо с помощью цикла for вывести следующие 11 строк в консоль:
+0 – это ноль
+1 – нечетное число
+2 – четное число
+3 – нечетное число
+…
+10 – четное число
+*/
 
 // сортировка пузырьком попорядку
 function mySort() {
@@ -148,17 +157,25 @@ sortDesc.addEventListener("click", function () {
 
 // Задача 2
 
+/*
+Дан массив arr (const arr = [1, 2, 3, 4, 5, 6, 7];).
+Необходимо внести такие изменения в массив, лежащий в const arr, чтобы
+его значения после изменений стали: 
+[1, 2, 100, 6, 7]
+*/
+
 //создаём массив из случайных чисел
 const randArr = [];
 function createArr() {
   let elemQuantity = +document.querySelector("#elemQuantity").value;
   for (let index = 0; index < elemQuantity; index++) {
     randArr.push(Math.floor(Math.random() * 10));
+    console.log(randArr);
   }
   let originalArray = document.querySelector("#originalArray");
   originalArray.innerHTML = `Исходный массив [${randArr}]`;
   console.log(`Исходный массив [${randArr}]`);
-  createArr = () => {};
+  // createArr = () => {};
 }
 
 // печатаем массив через создание DOM элемментов
@@ -197,6 +214,7 @@ function replElDom() {
 
 //функции очистки полей
 function clearOrigArr() {
+  // randNewArr.splice(0, elemQuantity, Math.floor(Math.random() * 10));
   let clearArr = document.querySelectorAll(".nav__item-arr");
   for (let i = 0; i < clearArr.length; i++) {
     clearArr[i].remove();
@@ -218,13 +236,14 @@ function clearInput() {
 }
 
 function clearArray() {
+  randArr.splice(0, elemQuantity, Math.floor(Math.random() * 10));
   document.querySelector("#originalArray").innerHTML = "";
   document.querySelector("#replacedArray").innerHTML = "";
 }
 
 //кнопки
-const arr = document.querySelector("#createArr");
-arr.addEventListener("click", function () {
+const createArrBtn = document.querySelector("#createArr");
+createArrBtn.addEventListener("click", function () {
   createArr();
   createElemArrDom();
 });
@@ -241,4 +260,106 @@ resetBtn2.addEventListener("click", function () {
   clearReplArr();
   clearInput();
   clearArray();
+});
+
+//задача 3
+
+/*
+Используя Math.random() необходимо сгенерировать массив, 
+содержащий 5 цифр в 
+диапазоне [0, 9].
+После создания массива необходимо вывести в консоль 
+следующие значения:
+1. Сумму элементов массива
+2. Минимальное значение в массиве
+3. Новый массив, содержащий индексы сгенерированного выше массива,
+ в которых значение равно 3.
+Пример: Если у нас сгенерировался массив [2, 3, 5, 7, 3], 
+то мы должны вывести 
+в консоль массив [1, 4]. Такой массив получился потому что 
+в сгенерированном массиве тройки лежат под индексами 1 и 4. 
+Если троек в сгенерированном массиве не окажется,
+ значит нужно будет вывести пустой массив.
+*/
+
+//создаём массив из случайных чисел
+const randNewArr = [];
+function newArr() {
+  for (let index = 0; index < 5; index++) {
+    randNewArr.push(Math.floor(Math.random() * 5));
+  }
+  let printArray = document.querySelector("#printArray");
+  console.log(`Исходный массив [${randNewArr}]`);
+  printArray.innerHTML = `Исходный массив [${randNewArr}]`;
+  // newArr = () => {};
+}
+
+//сумма элементов массива
+function sumArrEl(arr) {
+  let sum = 0;
+  for (let i = 0; i < randNewArr.length; i++) {
+    sum += randNewArr[i];
+  }
+  console.log(`Сумма элементов массива: ${sum}`);
+  document.querySelector("#sumOutput").innerHTML = sum;
+  // sumArrEl = () => {};
+}
+
+//минимальный элемент массива
+function minElArr(randNewArr) {
+  document.querySelector("#minElOutput").innerHTML = Math.min.apply(
+    null,
+    randNewArr
+  );
+  console.log(
+    `Минимальный элемент массива: ${Math.min.apply(null, randNewArr)}`
+  );
+  // minElArr = () => {};
+}
+
+//массив индексов в которых значение равно 3
+function indexArr() {
+  let newArr = [];
+  for (let index = 0; index <= randNewArr.length; index++) {
+    if (randNewArr[index] === 3) {
+      newArr.push(index);
+    }
+  }
+  console.log(`Массив индексов в которых значение равно 3: [${newArr}]`);
+  document.querySelector("#indexOutput").innerHTML = `[${newArr}]`;
+  // indexArr = () => {};
+}
+
+function clearText() {
+  randNewArr.splice(0, 6, Math.floor(Math.random() * 5));
+  document.querySelector("#indexOutput").innerHTML = "";
+  document.querySelector("#minElOutput").innerHTML = "";
+  document.querySelector("#sumOutput").innerHTML = "";
+  printArray.innerHTML = "";
+}
+
+//кнопки
+const newArrBtn = document.querySelector("#createNewArr");
+newArrBtn.addEventListener("click", function () {
+  newArr();
+});
+
+const sumArr = document.querySelector("#sumArrEl");
+sumArr.addEventListener("click", function () {
+  sumArrEl();
+});
+
+const minArrEl = document.querySelector("#minArrEl");
+minArrEl.addEventListener("click", function () {
+  minElArr(randNewArr);
+});
+
+const indArr = document.querySelector("#indexArr");
+indArr.addEventListener("click", function () {
+  indexArr(randNewArr);
+});
+
+const resetBtn3 = document.querySelector("#btn-reset3");
+resetBtn3.addEventListener("click", function () {
+  clearText();
 });
