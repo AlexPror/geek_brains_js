@@ -384,8 +384,8 @@ function piramid() {
 }
 
 function clearPiramid() {
-  arr.splice(0, randNewArr.length);
-  document.querySelector("#piamid").innerHTML = "";
+  arr.splice(0, arr.length);
+  document.querySelector("#printArr").innerHTML = "";
 }
 
 const piramidArr = document.querySelector("#piramidArray");
