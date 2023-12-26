@@ -214,17 +214,10 @@ function replElDom() {
 
 //функции очистки полей
 function clearOrigArr() {
-  // randNewArr.splice(0, elemQuantity, Math.floor(Math.random() * 10));
   let clearArr = document.querySelectorAll(".nav__item-arr");
   for (let i = 0; i < clearArr.length; i++) {
     clearArr[i].remove();
-  }
-}
-
-function clearReplArr() {
-  let replArr = document.querySelectorAll(".nav__item-arr");
-  for (let i = 0; i < replArr.length; i++) {
-    replArr[i].remove();
+    randArr.splice(0, randArr.length);
   }
 }
 
@@ -236,7 +229,6 @@ function clearInput() {
 }
 
 function clearArray() {
-  randArr.splice(0, elemQuantity, Math.floor(Math.random() * 10));
   document.querySelector("#originalArray").innerHTML = "";
   document.querySelector("#replacedArray").innerHTML = "";
 }
@@ -257,7 +249,6 @@ replaceBtn.addEventListener("click", function () {
 const resetBtn2 = document.querySelector("#btn-reset2");
 resetBtn2.addEventListener("click", function () {
   clearOrigArr();
-  clearReplArr();
   clearInput();
   clearArray();
 });
@@ -331,11 +322,11 @@ function indexArr() {
 }
 
 function clearText() {
-  randNewArr.splice(0, 6, Math.floor(Math.random() * 5));
+  randNewArr.splice(0, randNewArr.length);
+  document.querySelector("#printArray").innerHTML = "";
   document.querySelector("#indexOutput").innerHTML = "";
   document.querySelector("#minElOutput").innerHTML = "";
   document.querySelector("#sumOutput").innerHTML = "";
-  printArray.innerHTML = "";
 }
 
 //кнопки
@@ -362,4 +353,47 @@ indArr.addEventListener("click", function () {
 const resetBtn3 = document.querySelector("#btn-reset3");
 resetBtn3.addEventListener("click", function () {
   clearText();
+});
+
+//задача 4
+/*
+Необходимо вывести горку в консоль (используя цикл for), 
+как показано на рисунке, только у вашей горки должно быть 
+20 рядов, а не 5:
+
+x
+xx
+xxx
+xxxx
+xxxxx
+*/
+
+const string = "x";
+const arr = [];
+function piramid() {
+  let arrOrig = document.querySelector("#printArr");
+  for (let index = 1; index <= 20; index++) {
+    arr.push(string);
+    let str = arr.join("");
+    const newEl = document.createElement("div");
+    newEl.classList.add("piramid");
+    newEl.innerHTML = str;
+    arrOrig.appendChild(newEl);
+    console.log(arr.join(""));
+  }
+}
+
+function clearPiramid() {
+  arr.splice(0, randNewArr.length);
+  document.querySelector("#piamid").innerHTML = "";
+}
+
+const piramidArr = document.querySelector("#piramidArray");
+piramidArr.addEventListener("click", function () {
+  piramid();
+});
+
+const piramidReset = document.querySelector("#btn-reset4");
+piramidReset.addEventListener("click", function () {
+  clearPiramid();
 });

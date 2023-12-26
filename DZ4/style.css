@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .container {
   width: 1440px;
   display: flex;
@@ -13,7 +19,7 @@
 #nav {
   gap: 1.125rem;
   display: grid;
-  grid-template-columns: repeat(3, 10rem);
+  grid-template-columns: repeat(3, 5rem);
   align-items: center;
 }
 
@@ -31,7 +37,6 @@
 }
 
 .nav__item {
-  min-width: 10rem;
   min-height: 3rem;
   font-size: 1rem;
   color: black;
@@ -63,6 +68,12 @@
   margin-left: 1rem;
 }
 
+.piramid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .resText {
   margin-left: 0.2rem;
 }
@@ -74,12 +85,12 @@
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   flex-direction: column;
+  width: 25%;
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 4rem;
 }
 
 .title-wrap {
