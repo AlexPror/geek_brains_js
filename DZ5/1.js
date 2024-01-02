@@ -15,4 +15,15 @@ const numbers = {
   key7: 7,
 };
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const valueArr = Object.values(numbers);
+console.log(valueArr);
+
+const num = valueArr.filter((dig) => dig >= 3);
+console.log(num.join(","));
+
+for (let key in numbers) {
+  let num = numbers[key];
+  if (num >= 3) {
+    console.log(num);
+  }
+}

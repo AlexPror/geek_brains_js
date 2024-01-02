@@ -57,7 +57,7 @@ function evenNumber() {
         `.nav__item[data="${dataAttr}"] .resText`
       );
       resTextEl.innerHTML = " - это ноль";
-    } else if (+nav.children[i].getAttribute("data") % 2 == 0) {
+    } else if (+nav.children[i].getAttribute("data") % 2 === 0) {
       const dataAttr = nav.children[i].getAttribute("data");
       const resTextEl = document.querySelector(
         `.nav__item[data="${dataAttr}"] .resText`
@@ -66,22 +66,6 @@ function evenNumber() {
     }
   }
 }
-
-// if (+nav.children[i].getAttribute("data") === 0) {
-//   const newElem = document.createElement("div");
-//   newElem.classList.add("element");
-//   newElem.id = "elem";
-//   newElem.innerHTML = "- это ноль";
-//   baseElem[i].insertBefore(newElem, baseElem.firstChild);
-// } else if (+nav.children[i].getAttribute("data") % 2 == 0) {
-//   const newElem = document.createElement("div");
-//   newElem.classList.add("element");
-//   newElem.id = "elem";
-//   newElem.innerHTML = "- четное число";
-//   baseElem[i].insertBefore(newElem, baseElem.firstChild);
-// }
-
-// evenNumber = () => {};
 
 // ищем НЕчетное число через атрибут
 function oddNumber() {
@@ -93,14 +77,8 @@ function oddNumber() {
         `.nav__item[data="${dataAttr}"] .resText`
       );
       resTextEl.innerHTML = "- нечетное число";
-      // const newElem = nav.children[i].getAttribute("data");
-      // newElem.classList.add("element");
-      // newElem.id = "elem";
-      // newElem.innerHTML = "- нечетное число";
-      // baseElem[i].insertBefore(newElem, baseElem.firstChild);
     }
   }
-  // oddNumber = () => {};
 }
 
 //удаление текста
@@ -175,7 +153,6 @@ function createArr() {
   let originalArray = document.querySelector("#originalArray");
   originalArray.innerHTML = `Исходный массив [${randArr}]`;
   console.log(`Исходный массив [${randArr}]`);
-  // createArr = () => {};
 }
 
 // печатаем массив через создание DOM элемментов
@@ -187,7 +164,6 @@ function createElemArrDom() {
     newElem.innerHTML = randArr[i];
     origArr.appendChild(newElem);
   }
-  // createElemArr = () => {};
 }
 
 //функция замены элемента в исходном массиве
@@ -282,7 +258,6 @@ function newArr() {
   let printArray = document.querySelector("#printArray");
   console.log(`Исходный массив [${randNewArr}]`);
   printArray.innerHTML = `Исходный массив [${randNewArr}]`;
-  // newArr = () => {};
 }
 
 //сумма элементов массива
@@ -298,14 +273,14 @@ function sumArrEl(arr) {
 
 //минимальный элемент массива
 function minElArr(randNewArr) {
-  document.querySelector("#minElOutput").innerHTML = Math.min.apply(
-    null,
+  document.querySelector("#minElOutput").innerHTML = Math.min(...randNewArr);
+  document.querySelector("#minElOutput").innerHTML = Math.min(
+    ...null,
     randNewArr
   );
   console.log(
     `Минимальный элемент массива: ${Math.min.apply(null, randNewArr)}`
   );
-  // minElArr = () => {};
 }
 
 //массив индексов в которых значение равно 3

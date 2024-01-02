@@ -28,6 +28,23 @@ const post = {
       },
     },
   ],
+  show() {
+    console.log(
+      `${this.author}, ${this.comments[0].rating.dislikes}, ${this.comments[1].userId}, ${this.comments[1].text}`
+    );
+  },
 };
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+post.show();
+
+console.log(post.author);
+console.log(post.comments[0].rating.dislikes);
+console.log(post.comments[1].userId);
+console.log(post.comments[1].text);
+
+function showInfo() {
+  console.log(
+    `${post.author}, ${post.comments[0].rating.dislikes}, ${post.comments[1].userId}, ${post.comments[1].text}`
+  );
+}
+showInfo();

@@ -17,4 +17,19 @@ const ru = [
   "воскресенье",
 ];
 
-// Здесь пишем решение, данный комментарий необходимо стереть.
+const arrObj = {};
+for (let i = 0; i < en.length; i++) {
+  arrObj[en[i]] = ru[i];
+}
+console.log(arrObj);
+
+//это не мое решение, но я его хотел бы сохранить здесь
+const combineArr = (keys, values) =>
+  keys.reduce(
+    (accumulator, currentValue, index) => (
+      (accumulator[currentValue] = values[index]), accumulator
+    ),
+    {}
+  );
+const obj = combineArr(en, ru);
+console.log(obj);
