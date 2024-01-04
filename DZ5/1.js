@@ -21,8 +21,8 @@ console.log(valueArr);
 const num = valueArr.filter((dig) => dig >= 3);
 console.log(num.join(","));
 
-for (let key in numbers) {
-  let num = numbers[key];
+for (const key in numbers) {
+  const num = numbers[key];
   if (num >= 3) {
     console.log(num);
   }

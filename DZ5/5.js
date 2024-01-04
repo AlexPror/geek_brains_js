@@ -33,3 +33,9 @@ const combineArr = (keys, values) =>
   );
 const obj = combineArr(en, ru);
 console.log(obj);
+
+//вариант от преподавателя
+const combineArray = (keys, values) =>
+  keys.reduce({ ...accumulator, [currentValue]: values[index] }, {});
+const objNew = combineArr(en, ru);
+console.log(objNew);

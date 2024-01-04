@@ -24,6 +24,6 @@ const products = [
 ];
 
 products.forEach((item) => {
-  let result = item.price * 0.85;
-  console.log(result);
+  item.price = item.price * 0.85;
 });
+console.log(products);

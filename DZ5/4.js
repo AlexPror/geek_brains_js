@@ -37,4 +37,4 @@ const filteredProductsByExistingImages = products.filter(
 console.log(filteredProductsByExistingImages);
 
 const sortedProductsByPrice = products.sort((a, b) => a.price - b.price);
-console.log(sortedProductsByPrice);
+console.log(products);
